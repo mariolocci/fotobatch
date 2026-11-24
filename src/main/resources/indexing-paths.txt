@@ -1,0 +1,4 @@
+# One path per line. Lines starting with # are ignored.
+# Update these roots to your photo folders.
+/home/mariolocci/Pictures/Camera/recup_dir.1
+/mnt/disk2tb/schede_SD

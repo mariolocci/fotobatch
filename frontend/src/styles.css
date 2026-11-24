@@ -1,0 +1,292 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f1f1f;
+  background: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 20px;
+}
+
+.search-box {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20vh;
+  transition: margin 0.2s ease;
+}
+
+.search-box.compact {
+  align-items: stretch;
+  margin-top: 0;
+}
+
+h1 {
+  color: #1a73e8;
+  margin-bottom: 24px;
+}
+
+form {
+  width: 100%;
+}
+
+input {
+  border: 1px solid #d9d9d9;
+  border-radius: 999px;
+  font-size: 1rem;
+  outline: none;
+  padding: 14px 20px;
+  width: 100%;
+}
+
+input:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+.search-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+select,
+button {
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+}
+
+button {
+  background: #1a73e8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #9dbce8;
+  cursor: not-allowed;
+}
+
+.results-layout {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  margin-top: 20px;
+}
+
+.results {
+  margin-top: 20px;
+}
+
+.results ul {
+  display: grid;
+  gap: 14px;
+  list-style: none;
+  padding: 0;
+}
+
+.results li {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 280px 1fr;
+  overflow: hidden;
+}
+
+.thumb-button {
+  background: transparent;
+  border: 0;
+  cursor: zoom-in;
+  display: block;
+  padding: 0;
+}
+
+img {
+  height: 180px;
+  object-fit: cover;
+  width: 280px;
+}
+
+.result-content {
+  padding: 12px 14px;
+}
+
+.result-content h3 {
+  margin: 0 0 8px;
+}
+
+.meta-grid {
+  display: grid;
+  gap: 6px 14px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin-bottom: 8px;
+}
+
+.meta-grid p {
+  margin: 0;
+}
+
+.path {
+  color: #5f6368;
+  font-size: 0.9rem;
+  margin: 0 0 8px;
+  word-break: break-all;
+}
+
+pre {
+  background: #f3f6fb;
+  border-radius: 8px;
+  margin: 8px 0 0;
+  max-height: 180px;
+  overflow: auto;
+  padding: 10px;
+  white-space: pre-wrap;
+}
+
+.hint {
+  color: #5f6368;
+}
+
+.error {
+  color: #b3261e;
+}
+
+.pager {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.facet-sidebar {
+  align-self: start;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  position: sticky;
+  top: 12px;
+}
+
+.facet-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.facet-header h3 {
+  margin: 0;
+}
+
+.link-button {
+  background: transparent;
+  color: #1a73e8;
+  padding: 0;
+}
+
+.facet-group {
+  margin-top: 12px;
+}
+
+.facet-group h4 {
+  margin: 0 0 8px;
+}
+
+.facet-group ul {
+  display: grid;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  max-height: 220px;
+  overflow: auto;
+  padding: 0;
+}
+
+.facet {
+  background: #f3f6fb;
+  border: 1px solid #d9e2f2;
+  border-radius: 8px;
+  color: #1f1f1f;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+}
+
+.facet.active {
+  background: #1a73e8;
+  color: #fff;
+}
+
+.photo-modal-overlay {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 20px;
+  position: fixed;
+  z-index: 1000;
+}
+
+.photo-modal {
+  background: #fff;
+  border-radius: 12px;
+  max-height: 95vh;
+  max-width: min(1000px, 95vw);
+  overflow: auto;
+  padding: 14px;
+}
+
+.photo-modal-close {
+  margin-bottom: 10px;
+}
+
+.photo-modal-image {
+  display: block;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  width: 100%;
+}
+
+.photo-modal-title {
+  margin: 10px 0 0;
+}
+
+@media (max-width: 760px) {
+  .results-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .facet-sidebar {
+    position: static;
+  }
+
+  .results li {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
